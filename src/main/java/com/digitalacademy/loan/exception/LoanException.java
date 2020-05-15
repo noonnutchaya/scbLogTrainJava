@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 
 @Setter
 @Getter
-public class LoanException {
+public class LoanException extends Throwable {
     private LoanError loanError;
     private HttpStatus httpStatus = HttpStatus.OK;
 

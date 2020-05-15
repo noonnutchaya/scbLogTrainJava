@@ -1,9 +1,12 @@
 package com.digitalacademy.loan.service;
 
 
+import com.digitalacademy.loan.constants.LoanError;
+import com.digitalacademy.loan.exception.LoanException;
 import com.digitalacademy.loan.model.LoanInfo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -13,7 +16,7 @@ import java.util.Map;
 public class LoanService {
     private static final Logger log = LogManager.getLogger(LoanService.class.getName());
 
-    public LoanInfo getLoanInfoById(Long id) throws Exception {
+    public LoanInfo getLoanInfoById(Long id) throws Exception, LoanException {
         log.info("get lone info by id: {}",id);
 
         LoanInfo loanInfo = new LoanInfo();
@@ -27,8 +30,13 @@ public class LoanService {
         }
         else if (id.equals(2L)) {
             log.info("id: {}",id);
-//            loanInfo.setStatus("bad request");
-//            throw new Exception("exception not found");
+
+//            throw new LoanException(LoanError.GET_LOAN_INFO_NOT_FOUND,HttpStatus.BAD_REQUEST);
+//            throw new LoanException(LoanError.GET_LOAN_INFO_NOT_FOUND,HttpStatus.BAD_REQUEST) ;
+            throw new LoanException(
+                    LoanError.GET_LOAN_INFO_NOT_FOUND,
+                    HttpStatus.BAD_REQUEST
+            );
         }
         else  {
             log.info(" id: {}",id);

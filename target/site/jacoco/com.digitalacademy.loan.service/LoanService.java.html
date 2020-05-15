@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="th"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LoanService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">loan</a> &gt; <a href="index.source.html" class="el_package">com.digitalacademy.loan.service</a> &gt; <span class="el_source">LoanService.java</span></div><h1>LoanService.java</h1><pre class="source lang-java linenums">package com.digitalacademy.loan.service;
+
+
+import com.digitalacademy.loan.constants.LoanError;
+import com.digitalacademy.loan.exception.LoanException;
+import com.digitalacademy.loan.model.LoanInfo;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Service
+<span class="fc" id="L16">public class LoanService {</span>
+<span class="fc" id="L17">    private static final Logger log = LogManager.getLogger(LoanService.class.getName());</span>
+
+    public LoanInfo getLoanInfoById(Long id) throws Exception, LoanException {
+<span class="fc" id="L20">        log.info(&quot;get lone info by id: {}&quot;,id);</span>
+
+<span class="fc" id="L22">        LoanInfo loanInfo = new LoanInfo();</span>
+
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (id.equals(1L)) {</span>
+<span class="fc" id="L25">            loanInfo.setId(1L);</span>
+<span class="fc" id="L26">            loanInfo.setStatus(&quot;ok&quot;);</span>
+<span class="fc" id="L27">            loanInfo.setAccountPayable(&quot;111-111-1111&quot;);</span>
+<span class="fc" id="L28">            loanInfo.setAccountReceivable(&quot;222-222-2222&quot;);</span>
+<span class="fc" id="L29">            loanInfo.setPrincipalAmount(550000.50);</span>
+        }
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        else if (id.equals(2L)) {</span>
+<span class="fc" id="L32">            log.info(&quot;id: {}&quot;,id);</span>
+
+//            throw new LoanException(LoanError.GET_LOAN_INFO_NOT_FOUND,HttpStatus.BAD_REQUEST);
+//            throw new LoanException(LoanError.GET_LOAN_INFO_NOT_FOUND,HttpStatus.BAD_REQUEST) ;
+<span class="fc" id="L36">            throw new LoanException(</span>
+                    LoanError.GET_LOAN_INFO_NOT_FOUND,
+                    HttpStatus.BAD_REQUEST
+            );
+        }
+        else  {
+<span class="fc" id="L42">            log.info(&quot; id: {}&quot;,id);</span>
+<span class="fc" id="L43">            throw new Exception(&quot;test throw new exception&quot;) ;</span>
+        }
+
+
+<span class="fc" id="L47">        return loanInfo ;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

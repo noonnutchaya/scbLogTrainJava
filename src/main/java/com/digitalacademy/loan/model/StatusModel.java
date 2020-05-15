@@ -13,7 +13,7 @@ public class StatusModel implements Serializable {
     @JsonProperty("message")
     private String message;
 
-    public StatusModel() {}
+    public StatusModel(String code, String message, String loanErrorMessage) {}
 
     public StatusModel(String code, String message) {
         this.code = code;

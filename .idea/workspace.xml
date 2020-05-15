@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1645df86-1024-4d77-bacc-e8b6d5905dd6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/digitalacademy/loan/controller/LoanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digitalacademy/loan/controller/LoanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digitalacademy/loan/exception/LoanException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digitalacademy/loan/exception/LoanException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digitalacademy/loan/model/StatusModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digitalacademy/loan/model/StatusModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digitalacademy/loan/service/LoanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digitalacademy/loan/service/LoanService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/digitalacademy/loan/controller/LoanController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/digitalacademy/loan/controller/LoanController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/digitalacademy/loan/service/LoanService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/digitalacademy/loan/service/LoanService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +47,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.LoanControllerTest">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.digitalacademy.loan.Application" />
       <module name="loan" />
@@ -58,8 +61,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoanControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.digitalacademy.loan.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.digitalacademy.loan.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.digitalacademy.loan.controller.LoanControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.digitalacademy.loan.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.digitalacademy.loan.service" />
+      <option name="MAIN_CLASS_NAME" value="com.digitalacademy.loan.service.LoanServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoanControllerTest" />
+        <item itemvalue="JUnit.LoanServiceTest" />
         <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
